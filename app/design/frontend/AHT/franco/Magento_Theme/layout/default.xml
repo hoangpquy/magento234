@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="2column-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <referenceBlock name="top.links">
+            <referenceBlock name="my-account-link" remove ="true" />
+            
+        </referenceBlock>
+        <referenceBlock name="header.links">
+            <referenceBlock name="authorization-link-login" remove="true" />
+        </referenceBlock>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_src" xsi:type="string">images/my_logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">100</argument>
+                <argument name="logo_img_height" xsi:type="number">50</argument>
+                <argument name="logo_alt" xsi:type="string">Logo name</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Unit3\HelloBlock\Block\Test" name="hello.block" template="Unit3_HelloBlock::index.phtml">
+                <arguments>
+                    <argument name="block_text" xsi:type="string">Custom string</argument>
+                    <argument name="block_number" xsi:type="number">100</argument>
+                </arguments>
+            </block>
+    
+        </referenceContainer>
+        <referenceBlock name="report.bugs" remove="true"/>
+    </body>
+</page>

@@ -1,0 +1,12 @@
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+        <referenceContainer name="product.info.main">
+            <referenceBlock name="product.info.review" >
+                <arguments>
+                    <argument name="template" xsi:type="string">Magento_Review::helper/summary.phtml</argument>
+                </arguments>
+            </referenceBlock>
+        </referenceContainer>
+    </referenceContainer>
+
+</page>
