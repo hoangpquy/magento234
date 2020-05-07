@@ -13,7 +13,7 @@
             
         </referenceBlock>
         <referenceBlock name="header.links">
-            <referenceBlock name="authorization-link-login" remove="true" />
+            <!-- <referenceBlock name="authorization-link-login" remove="true" /> -->
         </referenceBlock>
         <referenceBlock name="logo">
             <arguments>
