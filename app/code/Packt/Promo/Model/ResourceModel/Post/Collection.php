@@ -7,6 +7,6 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
 
     protected function _construct()
     {
-        $init->_init('Packt\Promo\Model\Post','Packt\Promo\Model\ResourceModel\Post');
+        $this->_init('Packt\Promo\Model\Post','Packt\Promo\Model\ResourceModel\Post');
     }
 }

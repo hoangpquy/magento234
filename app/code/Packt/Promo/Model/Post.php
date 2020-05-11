@@ -1,10 +1,10 @@
 <?php
 namespace Packt\Promo\Model ;
 
-class Post extends \Magento\Framwork\Model\AbstractModel
+class Post extends \Magento\Framework\Model\AbstractModel
 {
     protected function _construct()
     {
-        $this ->init('Packt\Promo\Model\ResourceModel');
+        $this->_init('Packt\Promo\Model\ResourceModel\Post');
     }
 }
