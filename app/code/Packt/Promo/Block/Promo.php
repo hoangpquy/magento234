@@ -3,7 +3,8 @@
     /**
     * Promo block
     */
-    class Promo extends \Magento\Framework\View\Element\Template{
+    class Promo extends \Magento\Framework\View\Element\Template
+    {
         protected $context;
         protected $_categoryFactory;
         protected $storeManager;
@@ -11,12 +12,22 @@
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Catalog\Model\CategoryFactory $categoryFactory,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
+        // \Packt\Promo\Model\PostFactory $postFactory,
         array $data = []
         ){
             $this->_storeManager=$storeManager;
             $this->_categoryFactory = $categoryFactory;
+            $this->_postFactory = $postFactory;
             parent::__construct($context, $data);
         }
+        // public function getImage($entityId){
+        //     $post = $this->_postFactory->create();
+        //     $post_id = $post->load($categoryId);
+        //     $post = $this->getCategory($post_id)->getProductCollection();
+        //     $post->addAttributeToSelect('small_image');
+        //     return $post;
+
+        // }
         public function getCategory($categoryId){
             $category = $this->_categoryFactory->create();
             $category->load($categoryId);

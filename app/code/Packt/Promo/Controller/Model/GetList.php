@@ -9,7 +9,7 @@ class GetList extends \Magento\Framework\App\Action\Action
 
     public function __construct(
         Context $context,
-        \Magento\HelloWorld\Model\PostFactory $postFactory
+        \Packt\Promo\Model\PostFactory $postFactory
     )
     {
         $this->_postFactory = $postFactory;
